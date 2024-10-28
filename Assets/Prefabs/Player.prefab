@@ -78,6 +78,7 @@ MonoBehaviour:
   rb: {fileID: 6991894239885019671}
   cam: {fileID: 8638960920883018995}
   anim: {fileID: 6653686786036080267}
+  sensitivity: 0.75
 --- !u!136 &5271141219187665822
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -97,10 +98,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Height: 4
+  m_Radius: 0.28852117
+  m_Height: 1.4569311
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 1.4511157e-17, y: 0.77153444, z: 0.061478853}
 --- !u!95 &6653686786036080267
 Animator:
   serializedVersion: 7
@@ -151,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 4989438729773241428}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
