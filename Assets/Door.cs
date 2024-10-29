@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Door : MonoBehaviour, Interactable
 {
@@ -13,17 +14,31 @@ public class Door : MonoBehaviour, Interactable
     public GameObject coll;
 
     bool has_interacted = false;
+
+    public Door other_door;
+
+    public Camera view_camera;
+
+    public RawImage img;
     public void Iteract()
     {
         if(!has_interacted){
             if(!is_open){
                 is_open = true;
-                
+                // if(other_door != null){
+                //     other_door.is_open = true;
+                // }
             }
             else{
                 is_open = false;
+                // if(other_door != null){
+                //     other_door.is_open = false;
+                // }
             }
             has_interacted = true;
+            // if(other_door != null){
+            //     other_door.has_interacted = true;
+            // }
         }
     }
 
@@ -31,6 +46,14 @@ public class Door : MonoBehaviour, Interactable
     void Start()
     {
         local_y = transform.eulerAngles.y;
+        // if(other_door!= null){
+        //     if(other_door.view_camera != null){
+        //         if(img != null && img.texture != null){
+        //                 img.texture = other_door.view_camera.activeTexture;
+        //         }
+        //     }
+        // }
+        // view_camera.targetTexture = new RenderTexture(265, 552, 32);
     }
 
     // Update is called once per frame
@@ -49,6 +72,8 @@ public class Door : MonoBehaviour, Interactable
             if( Mathf.Abs(Mathf.DeltaAngle(coll.transform.eulerAngles.y, local_y + dir * 90.0f)) <= 0.1f){
                 has_interacted = false;
             }
+
+            
         }
         else{
             coll.transform.eulerAngles = new Vector3(
@@ -57,7 +82,10 @@ public class Door : MonoBehaviour, Interactable
                 coll.transform.eulerAngles.z);
             if(Mathf.Abs(Mathf.DeltaAngle(coll.transform.eulerAngles.y, local_y)) <= 0.1f){
                 has_interacted = false;
+
             }
+        
+
         }
     }
 }

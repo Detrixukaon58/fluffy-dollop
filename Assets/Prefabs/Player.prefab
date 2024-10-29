@@ -98,7 +98,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.28852117
+  m_Radius: 0.3
   m_Height: 1.4569311
   m_Direction: 1
   m_Center: {x: 1.4511157e-17, y: 0.77153444, z: 0.061478853}
@@ -189,7 +189,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0

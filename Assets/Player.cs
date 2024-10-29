@@ -85,7 +85,7 @@ public class Player : MonoBehaviour{
 
                 Interactable obj_parent = hit.collider.GetComponentInParent<Interactable>();
                 if(obj_parent != null && interact_counter >= 1.0f){
-                    obj.Iteract();
+                    obj_parent.Iteract();
                 }
             }
             if(interact_counter < 100.0f){
